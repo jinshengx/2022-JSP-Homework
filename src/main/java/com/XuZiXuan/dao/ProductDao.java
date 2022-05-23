@@ -16,9 +16,9 @@ public class ProductDao implements  IProductDao{
         pt.setString(2, product.getProductDescription());
         if(product.getPicture()!=null) {
             //for sql server
-            pt.setBinaryStream(3, product.getPicture());
+//            pt.setBinaryStream(3, product.getPicture());
             //for mysql
-            //   pt.setBlob(3, product.getPicture());
+               pt.setBlob(3, product.getPicture());
         }
         pt.setDouble(4, product.getPrice());
         pt.setInt(5, product.getCategoryId());
